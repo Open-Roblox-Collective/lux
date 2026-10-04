@@ -1,1 +1,5 @@
-/subprojects/*/
+/subprojects/*
+/build
+/builddir
+! /subprojects/box3d.wrap
+! /subprojects/raylib.wrap
