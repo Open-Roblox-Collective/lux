@@ -1,0 +1,8 @@
+[wrap-git]
+directory = box3d
+url = https://github.com/erincatto/box3d
+revision = e77352c
+depth = 1
+
+[provide]
+dependency = box3d
