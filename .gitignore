@@ -1,4 +1,5 @@
 /subprojects/*
+/subprojects/.wraplock
 /build
 /builddir
 ! /subprojects/box3d.wrap
