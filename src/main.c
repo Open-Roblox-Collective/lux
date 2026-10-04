@@ -1,10 +1,12 @@
 #include <raylib.h>
 
+int fps = 60; // variable fps idk
+
 int main(void)
 {
     InitWindow(1280, 720, "Lux");
 
-    SetTargetFPS(60);
+    SetTargetFPS(fps);
 
     while (!WindowShouldClose())
     {
@@ -12,7 +14,7 @@ int main(void)
 
         ClearBackground(RAYWHITE);
 
-        DrawText("Lux", 50, 50, 40, BLACK);
+        DrawText("orc presents: the fucking lux project", 50, 50, 40, BLACK);
 
         EndDrawing();
     }
