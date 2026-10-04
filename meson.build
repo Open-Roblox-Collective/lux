@@ -16,10 +16,13 @@ m_dep = meson.get_compiler('c').find_library('m', required: false)
 box3d_proj = cmake.subproject('box3d')
 box3d_dep = box3d_proj.dependency('box3d')
 
+raylib_proj = cmake.subproject('raylib')
+raylib_dep = raylib_proj.dependency('raylib')
+
 executable(
-  'my_app',
+  'lux',
   sources,
   include_directories: inc,
-  dependencies: [m_dep, box3d_dep],
+  dependencies: [m_dep, box3d_dep, raylib_dep],
   install: true,
 )
