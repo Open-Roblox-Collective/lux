@@ -1,7 +1,5 @@
 #include <box3d/box3d.h>
 
-// physics is never really destroyed. c will usually destroy it when it's parent DataModel is.
-
 typedef struct Phys Phys;
 
 struct Phys
