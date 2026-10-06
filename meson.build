@@ -1,17 +1,21 @@
 project(
   'lux',
-  'cpp',
+  ['c', 'cpp'],
   version: '1.0.0',
-  default_options: ['warning_level=3', 'cpp_std=c++17'],
+  default_options: [
+    'warning_level=3',
+    'c_std=c23',
+    'cpp_std=c++17',
+  ],
 )
 
 cmake = import('cmake')
 
-sources = ['src/main.cpp', 'src/utils.cpp']
+sources = ['src/main.c', '']
 
 inc = include_directories('include')
 
-m_dep = meson.get_compiler('cpp').find_library('m', required: false)
+m_dep = meson.get_compiler('c').find_library('m', required: false)
 
 box3d_proj = cmake.subproject('box3d')
 box3d_dep = box3d_proj.dependency('box3d')
